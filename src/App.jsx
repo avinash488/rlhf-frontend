@@ -1,8 +1,12 @@
+import { useState, useEffect} from 'react'
 import { useState } from 'react'
 import Home from './pages/Home'
 import Analytics from './pages/Analytics'
 
 export default function App() {
+  useEffect(() => {
+      fetch(import.meta.env.VITE_API_URL + '/')
+  }, [])
   const [page, setPage] = useState('home')
 
   return (
